@@ -11,7 +11,7 @@ fact:
 	addi $sp,$sp,8		# reset stack since we dont need it, facctorial is 1
 	jr $ra			# return 
 label:
-	addi $a0,$a0,-1		# $a0 = $a0-1
+	addi $a0,$a0,-1		# $a0 = $a0-1 (n = n-1)
 	jal fact		# call fact(n-1) -> recursive call
 
 	lw $a0,0($sp)		# reset the stack regs
